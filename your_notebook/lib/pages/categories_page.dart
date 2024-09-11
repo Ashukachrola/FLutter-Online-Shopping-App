@@ -91,26 +91,29 @@ class CategoryCard extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                category.title,
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black87,
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  category.title,
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black87,
+                  ),
                 ),
-              ),
-              SizedBox(height: 8),
-              Text(
-                category.description,
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Colors.black54,
+                SizedBox(height: 8),
+                Text(
+                  category.description,
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.black54,
+                  ),
+                  overflow: TextOverflow.ellipsis, // This ensures long text is truncated
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           Icon(
             Icons.arrow_forward_ios,
